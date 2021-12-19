@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File</title>
+    <style>
+        * {
+            background-color: #5d5d5d;
+            color: #d5d5d5;
+            text-align: center;
+        }
+
+        input {
+            font-size: 20px;
+            border: solid black 1px;
+        }
+
+        span {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Upload Files</h1>
+<form
+        action="/upload"
+        method="post"
+        enctype="multipart/form-data">
+    <input placeholder="Name" name="fileName" type="text" required>
+    <br>
+    <input placeholder="File" name="file" type="file" required>
+    <br>
+    <input type="checkbox" name="raw"> <span>Render Raw File</span>
+    <br><br>
+    <input type="submit" value="Upload">
+</form>
+</body>
+</html>
